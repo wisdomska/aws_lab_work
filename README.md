@@ -134,10 +134,10 @@ The full report includes:
 
 This repository serves as:
 
-✔ Academic lab submission  
-✔ Cloud architecture case study  
-✔ Reference for AWS migration best practices  
-✔ Demonstration of framework-driven design
+- Academic lab submission  
+- Cloud architecture case study  
+- Reference for AWS migration best practices  
+- Demonstration of framework-driven design
 
 ---
 
