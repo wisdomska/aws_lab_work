@@ -2,7 +2,7 @@
 
 # Executive Summary
 
-This report details the migration strategy for Techora Solutions' two-tier web application from on-premises servers to AWS. By applying the AWS Well-Architected Framework (WAF) and Cloud Adoption Framework (CAF), we ensure a design that is secure, resilient, and optimized for cost and performance from day one.
+This report details the migration strategy for Techora Solutions' two-tier web application from on-premises servers to AWS. By applying the AWS Well-Architected Framework (WAF) and Cloud Adoption Framework (CAF), I ensured a design that is secure, resilient, and optimized for cost and performance from day one.
 
 # Review of Existing Architecture
 
