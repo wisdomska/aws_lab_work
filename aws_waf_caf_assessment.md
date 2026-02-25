@@ -1,24 +1,25 @@
+# Techora Solutions Company Portal Migration  
 
 
-# Executive Summary
+## Executive Summary
 
 This report details the migration strategy for Techora Solutions' two-tier web application from on-premises servers to AWS. By applying the AWS Well-Architected Framework (WAF) and Cloud Adoption Framework (CAF), I ensured a design that is secure, resilient, and optimized for cost and performance from day one.
 
-# Review of Existing Architecture
+## Review of Existing Architecture
 
 The web application’s workload currently consists of 2 components.
 
-## Components of the Workload
+### Components of the Workload
 
-### Frontend Tier
+#### Frontend Tier
 
 A web server hosting the company’s portal interface on a single physical machine, serving HTTP/HTTPS requests to end users.
 
-### Backend Tier
+#### Backend Tier
 
 A relational database server which stores user credentials, portal content and application data, with a direct connection from the frontend.
 
-## Identified Risks and Weaknesses
+### Identified Risks and Weaknesses
 
 1. Both the frontend and backend appear to be running on single instances without redundancy.
 
@@ -34,7 +35,7 @@ A relational database server which stores user credentials, portal content and a
 
   
 
-# AWS Well-Architected Framework Evaluation
+## AWS Well-Architected Framework Evaluation
 
 Below is an evaluation of the current system’s workload against the 5 pillars of the AWS Well-Architected Framework:
 
@@ -48,15 +49,15 @@ Below is an evaluation of the current system’s workload against the 5 pillars 
 
 
 
-# Application of AWS Cloud Adoption Framework
+## Application of AWS Cloud Adoption Framework
 
-## The Business Perspective
+### The Business Perspective
 
-### Current Readiness
+#### Current Readiness
 
 Techora Solutions has identified the need to migrate and secure management support, indicating business awareness of cloud benefits. However, the organization needs to establish clear success metrics for the migration beyond technical implementation.
 
-### Key Actions Needed
+#### Key Actions Needed
 
 To be fully ready for migration, they need to:
 
@@ -68,13 +69,13 @@ To be fully ready for migration, they need to:
 
 · Identify stakeholders across departments who depend on the portal and communicate migration timeline
 
-## The People Perspective
+### The People Perspective
 
-### Current Readiness
+#### Current Readiness
 
 The organization likely has IT staff familiar with traditional infrastructure but may lack AWS-specific skills. The migration requires upskilling existing teams or acquiring cloud expertise.
 
-### Key Actions Needed
+#### Key Actions Needed
 
 To be fully ready for migration, they need to:
 
@@ -88,13 +89,13 @@ To be fully ready for migration, they need to:
 
 · Plan for change management to address resistance and build cloud-first culture
 
-## The Governance Perspective
+### The Governance Perspective
 
-### Current Readiness
+#### Current Readiness
 
 On-premises governance likely exists but needs adaptation for cloud environment. Policies for resource provisioning, cost control, and compliance must be established before large-scale deployment.
 
-### Key Actions Needed
+#### Key Actions Needed
 
 To be fully ready for migration, they need to:
 
@@ -108,13 +109,13 @@ To be fully ready for migration, they need to:
 
 · Define data classification and handling policies for cloud-stored data
 
-## The Platform Perspective
+### The Platform Perspective
 
-### Current Readiness
+#### Current Readiness
 
 The two-tier architecture is straightforward to migrate, but the platform design must incorporate AWS-native services and best practices rather than simple lift-and-shift.
 
-### Key Actions Needed
+#### Key Actions Needed
 
 To be fully ready for migration, they need to:
 
@@ -128,13 +129,13 @@ To be fully ready for migration, they need to:
 
 · Establish network connectivity strategy (VPN or AWS Direct Connect if hybrid period needed)
 
-## The Security Perspective
+### The Security Perspective
 
-### Current Readiness
+#### Current Readiness
 
 Migration presents opportunity to implement security controls from the start. Current on-premises security posture is unknown but likely has gaps given identified risks.
 
-### Key Actions Needed
+#### Key Actions Needed
 
 To be fully ready for migration, they need to:
 
@@ -150,13 +151,13 @@ To be fully ready for migration, they need to:
 
 · Enable AWS WAF on Application Load Balancer to protect against common web exploits
 
-## The Operations Perspective
+### The Operations Perspective
 
-### Current Readiness
+#### Current Readiness
 
 Manual operations processes must transition to automated, cloud-native approaches. Monitoring and incident response capabilities need establishment in AWS environment.
 
-### Key Actions Needed
+#### Key Actions Needed
 
 To be fully ready for migration, they need to:
 
@@ -172,12 +173,12 @@ To be fully ready for migration, they need to:
 
 · Implement infrastructure-as-code for all resources to enable repeatable deployments
 
-# Improved Architecture Design
+## Improved Architecture Design
 ![image](schema/aws_architecture_diagram.png)
 
 This architecture implements a high-availability, multi-tier environment to resolve the manual deployment and single-instance reliability risks identified in the evaluation of Techora Solutions’ company portal. By leveraging AWS CloudFormation for Infrastructure-as-Code and Amazon EC2 Auto Scaling across multiple Availability Zones, the system eliminates single points of failure while ensuring operational consistency. Security is reinforced through AWS IAM least-privilege access and AWS KMS encryption, while the data tier is optimized for resilience using Multi-AZ Amazon RDS and Amazon ElastiCache. Finally, integrated monitoring via CloudWatch and AWS Budgets provides the visibility required to maintain cost efficiency and prevent resource sprawl.
 
-# Reflection
+## Reflection
 
 This lab demonstrated how AWS frameworks provide structured approaches to cloud architecture decisions. The Well-Architected Framework's five pillars forced systematic evaluation of the workload across operational, security, reliability, performance, and cost dimensions, revealing gaps that might otherwise be overlooked in a simple lift-and-shift migration. The Cloud Adoption Framework highlighted that successful migration requires more than technical design, where organizational readiness across business alignment, people skills, governance policies, and operational processes determines long-term success.
 
