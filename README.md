@@ -6,7 +6,7 @@ Course / Lab: **Cloud Engineering 2**
 
 ---
 
-## 📘 Overview
+## Overview
 
 This project presents the architectural evaluation and cloud migration strategy for **Techora Solutions' Company Portal**, a two-tier web application transitioning from on-premises infrastructure to **Amazon Web Services (AWS)**.
 
@@ -19,7 +19,7 @@ The objective is to design a cloud architecture that is **secure, resilient, sca
 
 ---
 
-## 🏗 Existing Architecture Summary
+## Existing Architecture Summary
 
 The original system consists of a simple two-tier deployment:
 
@@ -35,7 +35,7 @@ The original system consists of a simple two-tier deployment:
 
 ---
 
-## ⚠ Identified Risks & Weaknesses
+## Identified Risks & Weaknesses
 
 The on-premises design introduces several limitations:
 
@@ -48,7 +48,7 @@ The on-premises design introduces several limitations:
 
 ---
 
-## ✅ AWS Well-Architected Evaluation
+## AWS Well-Architected Evaluation
 
 The workload was assessed across the **five pillars** of the AWS Well-Architected Framework:
 
@@ -71,16 +71,16 @@ The evaluation identified modernization opportunities using native AWS services 
 
 ---
 
-## ☁ Improved AWS Architecture
+## Improved AWS Architecture
 
 The redesigned cloud architecture resolves prior risks by introducing:
 
-✅ High availability across multiple Availability Zones  
-✅ Auto-scaling frontend infrastructure  
-✅ Managed, fault-tolerant database layer  
-✅ Encryption & identity-driven security controls  
-✅ Caching for performance optimization  
-✅ Monitoring & cost governance mechanisms  
+- High availability across multiple Availability Zones  
+- Auto-scaling frontend infrastructure  
+- Managed, fault-tolerant database layer  
+- Encryption & identity-driven security controls  
+- Caching for performance optimization  
+- Monitoring & cost governance mechanisms  
 
 Core design principles:
 
@@ -91,7 +91,7 @@ Core design principles:
 
 ---
 
-## 🧭 Cloud Adoption Framework (CAF) Insights
+## Cloud Adoption Framework (CAF) Insights
 
 Successful migration requires organizational alignment beyond technology.
 
@@ -106,7 +106,7 @@ The CAF evaluation covers six perspectives:
 
 ---
 
-## 🎯 Key Learning Outcomes
+## Key Learning Outcomes
 
 This lab demonstrates:
 
@@ -117,7 +117,7 @@ This lab demonstrates:
 
 ---
 
-## 📂 Document Structure
+## Document Structure
 
 The full report includes:
 
@@ -130,7 +130,7 @@ The full report includes:
 
 ---
 
-## 🚀 Purpose of This Repository
+## Purpose of This Repository
 
 This repository serves as:
 
@@ -141,13 +141,13 @@ This repository serves as:
 
 ---
 
-## 📜 License / Usage
+## License / Usage
 
 This material is provided for **educational and demonstration purposes**.
 
 ---
 
-## ✨ Author
+## Author
 
 **Wisdom Senya Kobla Agbetsiafa**  
 Cloud Engineering / AWS Architecture Studies
