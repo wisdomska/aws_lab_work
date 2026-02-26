@@ -59,6 +59,7 @@ The workload was assessed across the **five pillars** of the AWS Well-Architecte
 | **Reliability** | Multi-AZ, failover, backups |
 | **Performance Efficiency** | Right-sizing & caching |
 | **Cost Optimization** | Cost visibility & governance |
+| **Sustainability** | Energy Efficiency | 
 
 The evaluation identified modernization opportunities using native AWS services such as:
 
